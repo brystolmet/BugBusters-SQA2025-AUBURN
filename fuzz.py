@@ -1,5 +1,6 @@
 import random 
 import string
+import myLogger
 
 def add(v1, v2):
     if isinstance(v1, str) and not v1.isnumeric():
@@ -91,13 +92,27 @@ def generateFuzzedValue():
         return ''.join(random.choices(string.ascii_letters + string.digits, k=random.randint(2, 10)))
 
 
-def simpleFuzzer():  
-   a = generateFuzzedValue()
-   b = generateFuzzedValue()
+def simpleFuzzer():
+   try:
+    a = generateFuzzedValue()
+    logObj.info("Received randomly generated value for a: %r", a)
+   except Exception as e:
+       logObj.error("Invalid input for a expected another value")
+   try:
+       b = generateFuzzedValue()
+       logObj.info("Received randomly generated value for a: %r", b)
+   except Exception as e:
+       logObj.error("Invalid input for a expected another value")
    print("A:", a)
    print("B:", b)
-   fuzzValues(a,b)
+   try:
+       fuzzresult = fuzzValues(a,b)
+       logObj.info("The result of the fuzzed values are: %r", fuzzresult)
+   except Exception as e:
+       logObj.error("Invalid computation error %r", fuzzresult)
 
 
 if __name__=='__main__':
+    logObj = myLogger.giveMeLoggingObject
+    logObj.info("This is the start of the project logging")
     simpleFuzzer()
