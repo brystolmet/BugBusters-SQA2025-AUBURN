@@ -1,2 +1,2 @@
-secret = "xHGIERGERKGjkgregkerjgierkGJerOGjergEJGERGERGERGRGGERGEIER"
+secret = "xHGIERGERKGjkgregkerjgieRGERGERGRGGERGEIER"
 print("Secret: " + secret)
