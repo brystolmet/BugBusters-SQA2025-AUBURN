@@ -68,15 +68,15 @@ def modulus(v1, v2):
 
 def fuzzValues(val1, val2):
    res = divide(val1, val2)
-   print(res)
+   print("Divide: " + res)
    res = add(val1, val2)
-   print(res)
+   print("Add: " + res)
    res = multiply(val1, val2)
-   print(res)
+   print("Multiply: " + res)
    res = subtract(val1, val2)
-   print(res)
+   print("Subtract: " + res)
    res = modulus(val1, val2)
-   print(res)
+   print("Modulus: " + res)
    
 
 def generateFuzzedValue():
