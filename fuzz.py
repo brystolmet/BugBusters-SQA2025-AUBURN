@@ -1,4 +1,4 @@
-import random 
+import random
 import string
 import myLogger
 
@@ -19,10 +19,10 @@ def multiply(v1, v2):
         return "At least one input is non-numeric"
     if isinstance(v2, str) and not v2.isnumeric():
         return "At least one input is non-numeric"
-    
+
     v1 = float(v1)
     v2 = float(v2)
-    
+
     return v1 * v2
 
 
@@ -32,12 +32,12 @@ def divide(v1, v2):
 
    if isinstance(v2, str) and v2.isnumeric()== False:
       return "At least one input is non-numeric"
-   
+
    v1 = float(v1)
    v2 = float(v2)
 
    if v2!=0:
-    return v1 / v2 
+    return v1 / v2
    else:
       return "Dvision by zero"
 
@@ -78,7 +78,7 @@ def fuzzValues(val1, val2):
    print("Subtract: " + res)
    res = modulus(val1, val2)
    print("Modulus: " + res)
-   
+
 
 def generateFuzzedValue():
    fuzz_type = random.choice(['int', 'float', 'alpha', 'alphanum'])
@@ -113,6 +113,6 @@ def simpleFuzzer():
 
 
 if __name__=='__main__':
-    logObj = myLogger.giveMeLoggingObject
+    logObj = myLogger.giveMeLoggingObject()
     logObj.info("This is the start of the project logging")
     simpleFuzzer()
