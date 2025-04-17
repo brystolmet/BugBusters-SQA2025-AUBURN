@@ -6,5 +6,5 @@ def giveMeLoggingObject():
     file_name  = 'project-LOGGER.log'
     ### creates one Global logger: logging.basicConfig
     logging.basicConfig(format=format_str, filename=file_name, level=logging.INFO)
-    loggerObj = logging.getLogger('simple-logger')
-    return loggerObj
+    logObj = logging.getLogger('simple-logger')
+    return logObj
