@@ -67,17 +67,36 @@ def modulus(v1, v2):
 
 
 def fuzzValues(val1, val2):
-   res = divide(val1, val2)
-   print("Divide: " + res)
-   res = add(val1, val2)
-   print("Add: " + res)
-   res = multiply(val1, val2)
-   print("Multiply: " + res)
-   res = subtract(val1, val2)
-   print("Subtract: " + res)
-   res = modulus(val1, val2)
-   print("Modulus: " + res)
-   
+    # Divide
+    try:
+        res = divide(val1, val2)
+        print("Divide: " + res)
+    except Exception as e:
+        print("Crash Caught in Divide: " + str(e))
+    # Add
+    try:
+        res = add(val1, val2)
+        print("Add: " + res)
+    except Exception as e:
+        print("Crash Caught in Add: " + str(e))
+    # Multiply
+    try:
+        res = multiply(val1, val2)
+        print("Multiply: " + res)
+    except Exception as e:
+        print("Crash Caught in Multiply: " + str(e))
+    # Subtract
+    try:
+        res = subtract(val1, val2)
+        print("Subtract: " + res)
+    except Exception as e:
+        print("Crash Caught in Subtract: " + str(e))
+    # Modulus
+    try:
+        res = modulus(val1, val2)
+        print("Modulus: " + res)
+    except Exception as e:
+        print("Crash Caught in Modulus: " + str(e))
 
 def generateFuzzedValue():
    fuzz_type = random.choice(['int', 'float', 'alpha', 'alphanum'])
