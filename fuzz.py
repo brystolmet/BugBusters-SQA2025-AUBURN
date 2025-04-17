@@ -27,11 +27,11 @@ def multiply(v1, v2):
 
 
 def divide(v1, v2):
-   if isinstance(v1, str) and v1.isnumeric()== False:
-      return "At least one input is non-numeric"
+#    if isinstance(v1, str) and v1.isnumeric()== False:
+#       return "At least one input is non-numeric"
 
-   if isinstance(v2, str) and v2.isnumeric()== False:
-      return "At least one input is non-numeric"
+#    if isinstance(v2, str) and v2.isnumeric()== False:
+#       return "At least one input is non-numeric"
 
    v1 = float(v1)
    v2 = float(v2)
@@ -42,10 +42,10 @@ def divide(v1, v2):
       return "Dvision by zero"
 
 def subtract(v1, v2):
-    if isinstance(v1, str) and not v1.isnumeric():
-        return "At least one input is non-numeric"
-    if isinstance(v2, str) and not v2.isnumeric():
-        return "At least one input is non-numeric"
+    # if isinstance(v1, str) and not v1.isnumeric():
+    #     return "At least one input is non-numeric"
+    # if isinstance(v2, str) and not v2.isnumeric():
+    #     return "At least one input is non-numeric"
 
     v1 = float(v1)
     v2 = float(v2)

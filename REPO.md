@@ -27,7 +27,9 @@ d) subtract - Does not check if string type is valid, just fails. So we learned 
 
 e) modulus - Does not check if string type is valid, just fails. So we learned to input checks.
 
-Below is an example output of fuzz.py:
+Below is an example output of fuzz.py where input checks is not used for divide and subtract:
+
+![alt text](screenshots/image.png)
 
 3. Forensics -
 Logging has been added to the same five python methods that were fuzzed. This logging includes the start of when the method is provoked as well as the args used, and if the method fails, the error it encounters.
