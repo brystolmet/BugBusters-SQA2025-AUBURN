@@ -3,7 +3,7 @@ import os
 
 def giveMeLoggingObject():
     format_str = '%(asctime)s - %(levelname)s - %(funcName)s - %(message)s'
-    file_name = '/results/forensic_logger.log'
+    file_name = 'forensic_logger.log'
 
     # Setup global logging configuration
     logging.basicConfig(

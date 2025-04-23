@@ -1,0 +1,4 @@
+2025-04-23 15:10:25,473 - INFO - <module> - This is the start of the project logging
+2025-04-23 15:10:25,474 - INFO - simpleFuzzer - Received randomly generated value for a: '-730'
+2025-04-23 15:10:25,475 - INFO - simpleFuzzer - Received randomly generated value for a: '477.93'
+2025-04-23 15:10:25,475 - INFO - simpleFuzzer - The result of the fuzzed values are: None
