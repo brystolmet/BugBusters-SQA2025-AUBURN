@@ -1,10 +1,10 @@
-# BugBusters-SQA2025-AUBURN  
+# BugBusters-SQA2025-AUBURN
 ## Software Quality Assurance Group Project Report
 
-- **Brystol Metcalf**  **Jack Bianca**  **Addison Barrow**  **Jonathan Turnage** 
+- **Brystol Metcalf**  **Jack Bianca**  **Addison Barrow**  **Jonathan Turnage**
 # 04/26/25
 
-1. Security Weaknesses - 
+1. Security Weaknesses -
 A pre-commit hook was created to run bandit on all python files in the repository in an attempt to detect vulnerabilities. It is located in the .git/hooks hidden folder. This hook generates the bandit_report.csv file to record any findings. Below is an example output:
 '''
 filename,test_name,test_id,issue_severity,issue_confidence,issue_cwe,issue_text,line_number,col_offset,end_col_offset,line_range,more_info
