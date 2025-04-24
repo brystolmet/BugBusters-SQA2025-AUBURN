@@ -8,6 +8,9 @@ def checkIfWeirdYAML(yaml_script):
     '''
     to filter invalid YAMLs such as ./github/workflows/
     '''
+    if not isinstance(yaml_script, str):  #check if the input is valid string
+        logObj.error("Invalid input type, string expected")
+        return False
     val = False
     if ( any(x_ in yaml_script for x_ in exampleConstants.WEIRD_PATHS  ) ):
         val = True
@@ -16,6 +19,9 @@ def checkIfWeirdYAML(yaml_script):
 
 #from parser.py
 def readYAMLAsStr( path_script ):
+    if not isinstance(path_script, str):  #validate string type
+        logObj.error("Invalid input type, string expected")
+        return ""
     yaml_as_str = exampleConstants.YAML_SKIPPING_TEXT
     with open( path_script , exampleConstants.FILE_READ_FLAG) as file_:
         yaml_as_str = file_.read()
@@ -24,14 +30,25 @@ def readYAMLAsStr( path_script ):
 
 #from parser.py
 def checkIfValidHelm(path_script):
+    if not isinstance(path_script, str):  #validate input type
+        logObj.error("Invalid input type, string expected")
+        return False
     val_ret = False
-    if ( (exampleConstants.HELM_KW in path_script) or (exampleConstants.CHART_KW in path_script) or (exampleConstants.SERVICE_KW in path_script) or (exampleConstants.INGRESS_KW in path_script)  or(exampleConstants.HELM_DEPLOY_KW in path_script) or (exampleConstants.CONFIG_KW in path_script) )  and (exampleConstants.VALUE_KW in path_script) :
+    if ( (exampleConstants.HELM_KW in path_script)
+        or (exampleConstants.CHART_KW in path_script)
+        or (exampleConstants.SERVICE_KW in path_script)
+        or (exampleConstants.INGRESS_KW in path_script)
+        or (exampleConstants.HELM_DEPLOY_KW in path_script)
+        or (exampleConstants.CONFIG_KW in path_script) ) and (exampleConstants.VALUE_KW in path_script) :
         val_ret = True
         logObj.info(f"Valid Helm: {path_script}")
     return val_ret
 
 #from scanner.py
 def isValidUserName(uName):
+    if not isinstance(uName, str):  #check for valid string input
+        logObj.error("Invalid input type, string expected")
+        return False
     valid = True
     if (isinstance( uName , str)  ):
         if( any(z_ in uName for z_ in exampleConstants.FORBIDDEN_USER_NAMES )   ):
@@ -45,6 +62,9 @@ def isValidUserName(uName):
 
 #from scanner.py
 def isValidPasswordName(pName):
+    if not isinstance(pName, str):  #check for valid string input
+        logObj.error("Invalid input type, string expected")
+        return False
     valid = True
     if (isinstance( pName , str)  ):
         if( any(z_ in pName for z_ in exampleConstants.FORBIDDEN_PASS_NAMES) )  :

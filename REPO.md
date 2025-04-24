@@ -14,28 +14,27 @@ filename,test_name,test_id,issue_severity,issue_confidence,issue_cwe,issue_text,
 .\KubeSec-master\TEST_CONSTANTS.py,hardcoded_password_string,B105,LOW,MEDIUM,https://cwe.mitre.org/data/definitions/259.html,Possible hardcoded password: 'TEST_ARTIFACTS/tango.values.yaml',9,22,56,[9],https://bandit.readthedocs.io/en/1.8.2/plugins/b105_hardcoded_password_string.html
 '''
 
-2. Fuzzing -
-Five methods are fuzzed in fuzz.py. The lessons learned from each are as follows:
+2. Fuzzing - Five methods are fuzzed in fuzz.py. The lessons learned from each are as follows:
 
-a) add - Does not check if string type is valid, just fails. So we learned to input checks.
+1) checkIfWeirdYAML - We learned to add input checks to ensure the input is a string before processing.
 
-b) multiply - Does not check if string type is valid, just fails. So we learned to input checks.
+2) readYAMLAsStr - We learned to validate the file path and ensure it is a valid string before attempting to read.
 
-c) divide - Does not check if string type is valid, just fails. So we learned to input checks.
+3) checkIfValidHelm - We learned to add input validation and ensure the path is a valid string and Helm configuration is properly checked.
 
-d) subtract - Does not check if string type is valid, just fails. So we learned to input checks.
+4) isValidUserName - We learned to check for forbidden username patterns before processing.
 
-e) modulus - Does not check if string type is valid, just fails. So we learned to input checks.
+5) isValidPasswordName - We learned to add input checks to ensure the password name is a valid string and handle forbidden password patterns appropriately.
 
-Below is an example output of fuzz.py where input checks is not used for divide and subtract:
+Below is an example output of fuzz.py where inputted usernames and passwords do not pass:
 
-![alt text](screenshots/image.png)
+
 
 3. Forensics -
 Logging has been added to the same five python methods that were fuzzed. This logging includes the start of when the method is provoked as well as the args used, and if the method fails, the error it encounters.
 Below is an screenshot of the logs:
 
-![alt text](screenshots/logger.PNG)
+
 
 4. Lessons Learned -
 In each activity, we learned how to detect vulnerabilities or made it easier to diagnose them. Developing these tools and integrating them into every work that we do, helps to build more resilient and secure code.
