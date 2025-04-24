@@ -25,16 +25,15 @@ filename,test_name,test_id,issue_severity,issue_confidence,issue_cwe,issue_text,
 4) isValidUserName - We learned to check for forbidden username patterns before processing.
 
 5) isValidPasswordName - We learned to add input checks to ensure the password name is a valid string and handle forbidden password patterns appropriately.
-
 Below is an example output of fuzz.py where inputted usernames and passwords do not pass:
 
-
+![alt text](screenshots/image.png)
 
 3. Forensics -
 Logging has been added to the same five python methods that were fuzzed. This logging includes the start of when the method is provoked as well as the args used, and if the method fails, the error it encounters.
 Below is an screenshot of the logs:
 
-
+![alt text](screenshots/logger.PNG)
 
 4. Lessons Learned -
 In each activity, we learned how to detect vulnerabilities or made it easier to diagnose them. Developing these tools and integrating them into every work that we do, helps to build more resilient and secure code.
