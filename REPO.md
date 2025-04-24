@@ -5,7 +5,10 @@
 # 04/26/25
 
 1. Security Weaknesses -
-A pre-commit hook was created to run bandit on all python files in the repository in an attempt to detect vulnerabilities. It is located in the .git/hooks hidden folder. This hook generates the bandit_report.csv file to record any findings. Below is an example output:
+A pre-commit hook was created to run bandit on all python files in the repository in an attempt to detect vulnerabilities. It is located in the .git/hooks hidden folder. This hook generates the bandit_report.csv file to record any findings. Below is an example console output and some outputs from the bandit report:
+
+![alt text](screenshots/bandit.png)
+
 '''
 filename,test_name,test_id,issue_severity,issue_confidence,issue_cwe,issue_text,line_number,col_offset,end_col_offset,line_range,more_info
 
