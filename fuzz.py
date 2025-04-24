@@ -11,6 +11,7 @@ def checkIfWeirdYAML(yaml_script):
     val = False
     if ( any(x_ in yaml_script for x_ in exampleConstants.WEIRD_PATHS  ) ):
         val = True
+        logObj.info(f"{yaml_script} is weird")
     return val
 
 #from parser.py
@@ -18,6 +19,7 @@ def readYAMLAsStr( path_script ):
     yaml_as_str = exampleConstants.YAML_SKIPPING_TEXT
     with open( path_script , exampleConstants.FILE_READ_FLAG) as file_:
         yaml_as_str = file_.read()
+        logObj.info(f"YAML content read: {path_script}")
     return yaml_as_str
 
 #from parser.py
@@ -25,6 +27,7 @@ def checkIfValidHelm(path_script):
     val_ret = False
     if ( (exampleConstants.HELM_KW in path_script) or (exampleConstants.CHART_KW in path_script) or (exampleConstants.SERVICE_KW in path_script) or (exampleConstants.INGRESS_KW in path_script)  or(exampleConstants.HELM_DEPLOY_KW in path_script) or (exampleConstants.CONFIG_KW in path_script) )  and (exampleConstants.VALUE_KW in path_script) :
         val_ret = True
+        logObj.info(f"Valid Helm: {path_script}")
     return val_ret
 
 #from scanner.py
@@ -33,6 +36,7 @@ def isValidUserName(uName):
     if (isinstance( uName , str)  ):
         if( any(z_ in uName for z_ in exampleConstants.FORBIDDEN_USER_NAMES )   ):
             valid = False
+            logObj.info(f"Forbidden username: {uName}")
         else:
             valid = True
     else:
@@ -45,6 +49,7 @@ def isValidPasswordName(pName):
     if (isinstance( pName , str)  ):
         if( any(z_ in pName for z_ in exampleConstants.FORBIDDEN_PASS_NAMES) )  :
             valid = False
+            logObj.info(f"Forbidden password: {pName}")
         else:
             valid = True
     else:
