@@ -8,8 +8,6 @@ import hvac
 
 import random 
 
-
-
 '''
 
 1. Install Vault 
