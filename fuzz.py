@@ -1,7 +1,7 @@
 import random
 import string
 import myLogger
-import constants
+import exampleConstants
 
 #from parser.py
 def checkIfWeirdYAML(yaml_script):
@@ -9,21 +9,21 @@ def checkIfWeirdYAML(yaml_script):
     to filter invalid YAMLs such as ./github/workflows/
     '''
     val = False
-    if ( any(x_ in yaml_script for x_ in constants.WEIRD_PATHS  ) ):
+    if ( any(x_ in yaml_script for x_ in exampleConstants.WEIRD_PATHS  ) ):
         val = True
     return val
 
 #from parser.py
 def readYAMLAsStr( path_script ):
-    yaml_as_str = constants.YAML_SKIPPING_TEXT
-    with open( path_script , constants.FILE_READ_FLAG) as file_:
+    yaml_as_str = exampleConstants.YAML_SKIPPING_TEXT
+    with open( path_script , exampleConstants.FILE_READ_FLAG) as file_:
         yaml_as_str = file_.read()
     return yaml_as_str
 
 #from parser.py
 def checkIfValidHelm(path_script):
     val_ret = False
-    if ( (constants.HELM_KW in path_script) or (constants.CHART_KW in path_script) or (constants.SERVICE_KW in path_script) or (constants.INGRESS_KW in path_script)  or(constants.HELM_DEPLOY_KW in path_script) or (constants.CONFIG_KW in path_script) )  and (constants.VALUE_KW in path_script) :
+    if ( (exampleConstants.HELM_KW in path_script) or (exampleConstants.CHART_KW in path_script) or (exampleConstants.SERVICE_KW in path_script) or (exampleConstants.INGRESS_KW in path_script)  or(exampleConstants.HELM_DEPLOY_KW in path_script) or (exampleConstants.CONFIG_KW in path_script) )  and (exampleConstants.VALUE_KW in path_script) :
         val_ret = True
     return val_ret
 
@@ -31,7 +31,7 @@ def checkIfValidHelm(path_script):
 def isValidUserName(uName):
     valid = True
     if (isinstance( uName , str)  ):
-        if( any(z_ in uName for z_ in constants.FORBIDDEN_USER_NAMES )   ):
+        if( any(z_ in uName for z_ in exampleConstants.FORBIDDEN_USER_NAMES )   ):
             valid = False
         else:
             valid = True
@@ -43,7 +43,7 @@ def isValidUserName(uName):
 def isValidPasswordName(pName):
     valid = True
     if (isinstance( pName , str)  ):
-        if( any(z_ in pName for z_ in constants.FORBIDDEN_PASS_NAMES) )  :
+        if( any(z_ in pName for z_ in exampleConstants.FORBIDDEN_PASS_NAMES) )  :
             valid = False
         else:
             valid = True
