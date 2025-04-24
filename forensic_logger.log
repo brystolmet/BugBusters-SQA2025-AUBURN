@@ -53,3 +53,21 @@
 2025-04-23 21:41:14,962 - INFO - simpleFuzzer - isValidPasswordName result: False
 2025-04-23 21:41:14,962 - INFO - simpleFuzzer - Testing isValidUserName with input 'test'
 2025-04-23 21:41:14,962 - INFO - simpleFuzzer - isValidPasswordName result: True
+2025-04-23 21:45:03,789 - INFO - <module> - This is the start of the project logging
+2025-04-23 21:45:03,790 - INFO - simpleFuzzer - Running checkIfWeirdYAML on exampleEnvironment.yml
+2025-04-23 21:45:03,790 - INFO - simpleFuzzer - Result of checkIfWeirdYAML: False
+2025-04-23 21:45:03,790 - INFO - simpleFuzzer - Running readYAMLAsStr on exampleEnvironment.yml
+2025-04-23 21:45:03,790 - INFO - readYAMLAsStr - YAML content read: exampleEnvironment.yml
+2025-04-23 21:45:03,790 - INFO - simpleFuzzer - readYAMLAsStr completed
+2025-04-23 21:45:03,790 - INFO - simpleFuzzer - Running checkIfValidHelm on exampleEnvironment.yml
+2025-04-23 21:45:03,790 - INFO - simpleFuzzer - Result of checkIfValidHelm: False
+2025-04-23 21:45:03,790 - INFO - simpleFuzzer - Testing isValidUserName with input 'domain'
+2025-04-23 21:45:03,790 - INFO - isValidUserName - Forbidden username: domain
+2025-04-23 21:45:03,790 - INFO - simpleFuzzer - isValidUserName result: False
+2025-04-23 21:45:03,790 - INFO - simpleFuzzer - Testing isValidUserName with input 'test'
+2025-04-23 21:45:03,790 - INFO - simpleFuzzer - isValidUserName result: True
+2025-04-23 21:45:03,790 - INFO - simpleFuzzer - Testing isValidPasswordName with input '_auth'
+2025-04-23 21:45:03,790 - INFO - isValidPasswordName - Forbidden password: _auth
+2025-04-23 21:45:03,790 - INFO - simpleFuzzer - isValidPasswordName result: False
+2025-04-23 21:45:03,790 - INFO - simpleFuzzer - Testing isValidUserName with input 'test'
+2025-04-23 21:45:03,790 - INFO - simpleFuzzer - isValidPasswordName result: True
