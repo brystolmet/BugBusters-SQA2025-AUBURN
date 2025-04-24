@@ -1,4 +1,37 @@
-2025-04-23 15:10:25,473 - INFO - <module> - This is the start of the project logging
-2025-04-23 15:10:25,474 - INFO - simpleFuzzer - Received randomly generated value for a: '-730'
-2025-04-23 15:10:25,475 - INFO - simpleFuzzer - Received randomly generated value for a: '477.93'
-2025-04-23 15:10:25,475 - INFO - simpleFuzzer - The result of the fuzzed values are: None
+2025-04-23 21:24:02,997 - INFO - <module> - This is the start of the project logging
+2025-04-23 21:24:02,998 - INFO - simpleFuzzer - Running checkIfWeirdYAML on exampleEnvironment.yml
+2025-04-23 21:24:02,998 - INFO - simpleFuzzer - Result of checkIfWeirdYAML: False
+2025-04-23 21:24:02,998 - INFO - simpleFuzzer - Running readYAMLAsStr on exampleEnvironment.yml
+2025-04-23 21:24:02,998 - INFO - simpleFuzzer - readYAMLAsStr completed
+2025-04-23 21:24:02,998 - INFO - simpleFuzzer - Running checkIfValidHelm on exampleEnvironment.yml
+2025-04-23 21:24:02,998 - INFO - simpleFuzzer - Result of checkIfValidHelm: False
+2025-04-23 21:24:02,998 - INFO - simpleFuzzer - Testing isValidUserName with input 'domain'
+2025-04-23 21:24:02,998 - INFO - simpleFuzzer - isValidUserName result: False
+2025-04-23 21:24:02,998 - INFO - simpleFuzzer - Testing isValidPasswordName with input '_auth'
+2025-04-23 21:24:02,998 - INFO - simpleFuzzer - isValidPasswordName result: False
+2025-04-23 21:24:18,041 - INFO - <module> - This is the start of the project logging
+2025-04-23 21:24:18,041 - INFO - simpleFuzzer - Running checkIfWeirdYAML on exampleEnvironment.yml
+2025-04-23 21:24:18,042 - INFO - simpleFuzzer - Result of checkIfWeirdYAML: False
+2025-04-23 21:24:18,042 - INFO - simpleFuzzer - Running readYAMLAsStr on exampleEnvironment.yml
+2025-04-23 21:24:18,042 - INFO - simpleFuzzer - readYAMLAsStr completed
+2025-04-23 21:24:18,042 - INFO - simpleFuzzer - Running checkIfValidHelm on exampleEnvironment.yml
+2025-04-23 21:24:18,042 - INFO - simpleFuzzer - Result of checkIfValidHelm: False
+2025-04-23 21:24:18,042 - INFO - simpleFuzzer - Testing isValidUserName with input 'domain'
+2025-04-23 21:24:18,042 - INFO - simpleFuzzer - isValidUserName result: False
+2025-04-23 21:24:18,042 - INFO - simpleFuzzer - Testing isValidPasswordName with input '_auth'
+2025-04-23 21:24:18,042 - INFO - simpleFuzzer - isValidPasswordName result: False
+2025-04-23 21:25:31,145 - INFO - <module> - This is the start of the project logging
+2025-04-23 21:25:31,146 - INFO - simpleFuzzer - Running checkIfWeirdYAML on exampleEnvironment.yml
+2025-04-23 21:25:31,146 - INFO - simpleFuzzer - Result of checkIfWeirdYAML: False
+2025-04-23 21:25:31,146 - INFO - simpleFuzzer - Running readYAMLAsStr on exampleEnvironment.yml
+2025-04-23 21:25:31,146 - INFO - simpleFuzzer - readYAMLAsStr completed
+2025-04-23 21:25:31,146 - INFO - simpleFuzzer - Running checkIfValidHelm on exampleEnvironment.yml
+2025-04-23 21:25:31,146 - INFO - simpleFuzzer - Result of checkIfValidHelm: False
+2025-04-23 21:25:31,146 - INFO - simpleFuzzer - Testing isValidUserName with input 'domain'
+2025-04-23 21:25:31,146 - INFO - simpleFuzzer - isValidUserName result: False
+2025-04-23 21:25:31,146 - INFO - simpleFuzzer - Testing isValidUserName with input 'test'
+2025-04-23 21:25:31,146 - INFO - simpleFuzzer - isValidUserName result: True
+2025-04-23 21:25:31,146 - INFO - simpleFuzzer - Testing isValidPasswordName with input '_auth'
+2025-04-23 21:25:31,146 - INFO - simpleFuzzer - isValidPasswordName result: False
+2025-04-23 21:25:31,146 - INFO - simpleFuzzer - Testing isValidUserName with input 'test'
+2025-04-23 21:25:31,146 - INFO - simpleFuzzer - isValidPasswordName result: True
